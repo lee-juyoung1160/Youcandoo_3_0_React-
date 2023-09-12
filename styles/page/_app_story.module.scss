@@ -1,0 +1,62 @@
+@import '../abstracts/app_mixin.scss';
+.story {
+  margin-top: 0;
+}
+.contents_wrap {
+  padding: 13.89vw 0 0;
+  .paragraph {
+    position: relative;
+    margin-bottom: 24.44vw;
+    &:first-of-type {
+      &:after {
+        display: none;
+      }
+    }
+    &:after {
+      position: absolute;
+      top: -6.67vw;
+      left: 4.44vw;
+      width: 9.44vw;
+      height: 0.83vw;
+      background-color: #000;
+      content: '';
+    }
+    &:last-of-type {
+      margin-bottom: 8.33vw;
+    }
+    h4 {
+      margin-bottom: 4.44vw;
+      padding: 0 8.89vw;
+      color: #000;
+      font-size: 5.56vw;
+      @include text-bold;
+      letter-spacing: 0;
+      line-height: 1.3em;
+    }
+    p {
+      padding: 0 8.89vw;
+      color: #5D5D5D;
+      font-size: 4.17vw;
+      line-height: 1.7em;
+      strong {
+        @include text-bold;
+      }
+    }
+    .img_center__wrap {
+      padding: 8.33vw 8.89vw 9.72vw;
+    }
+    .img_right__wrap {
+      padding: 5.56vw 0 5.56vw 8.89vw;
+    }
+  }
+}
+
+
+.foot_wrap {
+  padding: 0 8.89vw 29.17vw;
+  h3 {
+    padding: 8.33vw 0 2.78vw;
+    font-size: 5.56vw;
+    @include text-bold;
+  }
+}

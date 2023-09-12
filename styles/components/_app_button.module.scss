@@ -1,0 +1,58 @@
+$primary: var(--palette-purple-600);
+$default: #C4C4C4;
+
+
+/* color */
+.primary {
+  color: var(--palette-grey-100);
+  background-color: $primary;
+}
+.default {
+  color: var(--palette-grey-100);
+  background-color: $default;
+}
+.default01 {
+  color: $primary;
+  background-color: var(--palette-grey-100);
+}
+.reversal {
+  color: $primary;
+  background-color:  rgba(255,255,255,0);
+}
+.reversalDefault {
+  color: #9d9d9d;
+  background-color:  rgba(255,255,255,0);
+}
+
+/* radius */
+.radius {
+  border-radius: 1.39vw;
+}
+/* SIZE */
+.x_lg {
+  width: 100%;
+  text-align: center;
+  height: 19.44vw;
+  font-size: 4.72vw;
+}
+.lg {
+  width: 100%;
+  text-align: center;
+  height: 13.89vw;
+  font-size: 4.72vw;
+}
+
+.md {
+  width: 100%;
+  text-align: center;
+  height: 11.89vw;
+  font-size: 4.17vw;
+  font-weight: 600;
+}
+
+.sm {
+  width: 50%;
+  text-align: center;
+  height: 13.89vw;
+  font-size: 4.72vw;
+}

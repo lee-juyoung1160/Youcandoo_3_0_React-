@@ -1,0 +1,46 @@
+$palettes: (
+        purple: (
+                600: #6267EA, /* app */
+                500: #6066E6, /* web */
+                400: #6A70FD,
+                300: #94A5CE,
+                200: #d0d4ff,
+                100: #d5d8fb,
+        ),
+        pink:(
+                100: #F1E8FF,
+        ),
+        yellow: (
+                100: #FDF2C0,
+        ),
+        blue: (
+                700: #2B3A5F,
+                400: #43DBFF,
+                300: #68c8d5,
+                200: #84dae5,
+                100: #a3e2eb,
+        ),
+        grey: (
+                700: #000,
+                600: #5d5d5d,
+                500: #71787e,
+                400: #9d9d9d,
+                300: #c4c4c4,
+                200: #ececec,
+                100: #fff,
+        ),
+);
+
+:root {
+        @each $colorname, $palette in $palettes {
+                @each $key, $value in $palette {
+                        $keyname: "--palette-" + $colorname + "-" + $key;
+                        #{$keyname}: #{$value};
+                }
+        }
+}
+
+/*
+ 사용예시
+ background-color: var(--palette-grey-100);
+ */

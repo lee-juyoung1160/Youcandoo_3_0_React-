@@ -1,0 +1,124 @@
+@import "../abstracts/web_mixin.module";
+
+.terms {
+  padding: 2% 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--palette-grey-700);
+  font-family: "NanumSquareOTFLight","sans-serif";
+  h1{
+    margin-bottom: 4%;
+    font-size: 2rem;
+    font-family: "NanumSquareOTFBold","sans-serif";
+  }
+  h2 {
+    margin-bottom: 2%;
+    font-size: 1.2rem;
+    font-family: "NanumSquareOTFBold","sans-serif";
+  }
+  h3 {
+    font-family: "NanumSquareOTFRegular","sans-serif";
+  }
+  strong {
+    display: block;
+    font-family: "NanumSquareOTFRegular","sans-serif";
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+  }
+  .virtual_el {
+    margin-top: 2%;
+    padding-bottom: 2%;
+    position: relative;
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--palette-grey-200);
+    }
+  }
+  ol,ul {
+    li {
+      &:last-child {
+        margin-bottom: 0;
+      }
+      margin-bottom: 2%;
+    }
+  }
+  ol {
+    li {
+      ol,ul {
+        width: 95%;
+        margin: 0 auto;
+        padding: 2% 0;
+      }
+    }
+  }
+  ul.date {
+    padding: 2% 0;
+    li {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    font-family: "NanumSquareOTFBold","sans-serif";
+    color: var(--palette-purple-600);
+    text-decoration: underline;
+  }
+  .box_el {
+    border: 2px solid var(--palette-grey-200);
+    padding: 2%;
+    margin: 2% 0;
+    ul {
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+  ul.privacy_ul {
+    margin-top: 2%;
+    li {
+      margin-bottom: 0;
+    }
+  }
+  table {
+    margin-top: 2%;
+    width: 100%;
+    table-layout: fixed;
+   th,td {
+     padding: 1%;
+     border: 1px solid var(--palette-grey-200);
+     text-align: center;
+     background-color: var(--palette-grey-200);
+   }
+    td {
+      text-align: left;
+      background-color: var(--palette-grey-100);
+    }
+  }
+  .manager_el {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+// 반응형
+// 패드 반응형
+@include tablet {
+  .inner {
+    width: 94%;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+// 모바일 반응형
+@include mobile {
+  .inner {
+    width: 94%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}

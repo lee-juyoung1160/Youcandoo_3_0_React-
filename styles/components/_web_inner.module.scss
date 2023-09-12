@@ -1,0 +1,21 @@
+@import "../abstracts/web_mixin.module";
+.inner {
+  @include inner;
+}
+// 반응형
+// 패드 반응형
+@include tablet {
+  .inner {
+    width: 94%;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+// 모바일 반응형
+@include mobile {
+  .inner {
+    width: 94%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}

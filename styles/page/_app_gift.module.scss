@@ -1,0 +1,258 @@
+@import '../abstracts/app_mixin.scss';
+
+.gift {
+  .user_ucd {
+    position: fixed;
+    left: 0;
+    top: 13.89vw;
+    width: 100%;
+    height: 13.33vw;
+    @include inner;
+    background-color: #FAFAFA;
+    z-index: 99;
+    .ucd {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      height: 13.33vw;
+      color: #4C5264;
+      font-size: 4.44vw;
+      letter-spacing: 0;
+      span {
+        margin-right: 2.22vw;
+      }
+      strong {
+        color: #000;
+        @include text-extraBold;
+        margin-left: 1.39vw;
+      }
+    }
+  }
+
+  &_list {
+    padding: 13.89vw 4.44vw 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 4.72vw 0;
+      border-bottom: 1px solid #f3f3f3;
+      &:last-child {
+        border-bottom: none;
+      }
+      .gift_thumbnail {
+        overflow: hidden;
+        width: 25.00vw;
+        height: 25.00vw;
+        background-color: #eee;
+        border-radius: 1.39vw;
+      }
+      .gift_info {
+        width: 61.67vw;
+        > p {
+          height: 9.72vw;
+          margin: 2.78vw 0 4.44vw;
+          color: #000;
+          font-size: 3.89vw;
+          @include text-bold;
+          line-height: 1.3em;
+        }
+        .price_wrap {
+          display: flex;
+          align-items: center;
+          .price {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            > div {
+              position: relative;
+              width: 4.72vw;
+              height: 4.72vw;
+            }
+            > strong {
+              padding-left: 1.11vw;
+              font-size: 4.44vw;
+              @include text-extraBold;
+            }
+            button {
+              width: 22.22vw;
+              height: 8.33vw;
+              margin-left: auto;
+              color: #fff;
+              font-size: 3.89vw;
+              background-color: #ddd;
+              border-radius: 4.17vw;
+              &.active {
+                background-color: #6267EA;
+                @include text-bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 수량 선택 하단 모달 */
+  .bottom_modal_wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    .gift_quantity {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 300;
+      border-radius: 5.56vw 5.56vw 0 0;
+      .title {
+        position: relative;
+        margin: 9vw 0 5.56vw;
+        color: #000;
+        font-size: 4.44vw;
+        @include text-bold;
+        text-align: center;
+
+        &:after {
+          position: absolute;
+          left: 50%;
+          top: -20px;
+          width: 7.22vw;
+          height: 0.83vw;
+          transform: translateX(-50%);
+          background-color: rgba(0, 0, 0, .15);
+          border-radius: 13.89vw;
+          content: '';
+        }
+      }
+
+      ul {
+        margin-bottom: 1.39vw;
+        @include inner;
+
+        li {
+          display: flex;
+          align-items: center;
+          padding: 6.94vw 4.44vw;
+          border-top: 1px solid #ECECEC;
+
+          strong {
+            margin-right: auto;
+            width: 30%;
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            text-align: right;
+            @include text-bold;
+
+            button {
+              &:disabled {
+                img {
+                  opacity: .3;
+                }
+              }
+            }
+
+            em {
+              margin: 0 0.56vw;
+              @include text-bold;
+            }
+          }
+        }
+      }
+
+      .btn_wrap {
+        display: flex;
+        padding: 0 10px 10px;
+
+        li {
+          width: 50%;
+
+          &:first-child {
+            padding-right: 5px;
+          }
+
+          &:last-child {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+
+    .modal_bg {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      opacity: .3;
+      z-index: 299;
+    }
+  }
+
+  /* 신청 확인 모달 */
+  .success {
+    padding: 8.33vw 4vw 2vw;
+    color: #000;
+    font-size: 4.44vw;
+    @include text-bold;
+    line-height: 1.5em;
+    span {
+      display: block;
+      padding-bottom: 5vw;
+      color: #989898;
+      font-size: 3.33vw;
+      line-height: 1.2em;
+    }
+    .btn_wrap {
+      position: relative;
+      &:after {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1px;
+        height: 20px;
+        background-color: #ddd;
+        transform: translateY(-50%);
+        content: '';
+      }
+    }
+  }
+
+
+}
+.gift_complete {
+  .footer {
+    padding-bottom: 130px;
+  }
+}
+
+.footer {
+  padding: 8.33vw 4.44vw 11.11vw;
+  background-color: #f3f3f3;
+  h5 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.78vw;
+    color: #666;
+    font-size: 3.89vw;
+    @include text-bold;
+    span {
+      margin-left: 0.83vw;
+    }
+  }
+  p {
+    color: #666;
+    font-size: 3.61vw;
+    line-height: 1.5em;
+  }
+}
+

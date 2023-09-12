@@ -1,0 +1,172 @@
+@import '../abstracts/app_mixin.scss';
+
+.title {
+  margin-bottom: 6.39vw;
+  color: #000;
+  @include text-extraBold;
+  font-size: 5.56vw;
+  text-align: center;
+}
+.invitation_code_wrap {
+  margin-top: 9.72vw;
+  .input_copy_wrap {
+    position: relative;
+    width: 91.11vw;
+    margin: 0 auto;
+    input {
+      display: block;
+      width: 100%;
+      height: 10.28vw;
+      padding: 0 4.44vw 0 3.33vw;
+      font-size: 3.89vw;
+      border-radius: 1.39vw;
+      background-color: #f4f4f4;
+      border: none;
+    }
+    button {
+      position: absolute;
+      top: 0;
+      right: 1.39vw;
+      width: 20.56vw;
+      height: 10.28vw;
+      background: none;
+    }
+  }
+}
+
+.invitation_btn_wrap {
+  .invitation_btn {
+    margin-top: 3.33vw;
+    padding: 0 4.44vw;
+    button {
+      display: flex;
+      align-items: center;
+      height: 11.11vw;
+      @include text-bold;
+      font-size: 3.61vw;
+      border-radius: 1.39vw;
+      letter-spacing: 0.08vw;
+      &:first-of-type {
+        width: 100%;
+        margin-top: 6.67vw;
+        color: #350B06;
+        background-color: #FCE400;
+      }
+      &:last-child {
+        width: 100%;
+        margin-top: 2.78vw;
+        color: #fff;
+        background-color: #5D5D5D;
+      }
+    }
+  }
+  p {
+    margin-top: 4.17vw;
+    color: #FF0000;
+    font-size: 3.33vw;
+    text-align: center;
+  }
+}
+
+.invitation_status_wrap {
+  margin-top: 13.89vw;
+  .shadow_box {
+    display: flex;
+    width: 100vw;
+    height: 34.17vw;
+    margin: 0 auto;
+    @include bgImageUrl("invite_shadow_box.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    dl {
+      position: relative;
+      width: 50%;
+      padding: 10vw 0;
+      text-align: center;
+      &:first-child:after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 0.56vw;
+        height: 9.17vw;
+        margin-top: -3.33vw;
+        background-color: #EDEDED;
+        content: '';
+      }
+      dt {
+        color: #4C5264;
+        @include text-bold;
+        font-size: 3.61vw;
+      }
+      dd {
+        padding-top: 1.94vw;
+        @include text-extraBold;
+        font-size: 6.94vw;
+      }
+      &:first-child {
+        dd {
+          color: #4C5264;
+        }
+      }
+      &:last-child {
+        dd {
+          color: #43BEFF;
+        }
+      }
+    }
+  }
+  .my_ucd {
+    display: flex;
+    align-items: center;
+    width: 83.33vw;
+    height: 9.72vw;
+    margin: 5.56vw auto 9.72vw;
+    padding: 0 3.89vw;
+    font-size: 3.89vw;
+    background-color: #F4F6FA;
+    border-radius: 13.89vw;
+    strong {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+      color: #4C5264;
+      @include text-bold;
+    }
+    span {
+      margin-left: auto;
+      color: #6A7BFC;
+      @include text-extraBold;
+    }
+  }
+}
+.invitation_notice {
+  padding-bottom: 6.11vw;
+  .inner {
+    padding: 0 4.44vw;
+    .notice_title {
+      margin-bottom: 3.61vw;
+      padding-top: 5.56vw;
+      color: #000;
+      @include text-bold;
+      font-size: 4.17vw;
+      border-top: 0.28vw solid #E7E7E7;
+    }
+    ul {
+      li {
+        color: #000;
+        font-size: 3.33vw;
+        line-height: 1.5em;
+      }
+    }
+  }
+}
+
+.modal_text {
+  display: block;
+  text-align: center;
+  padding-bottom: 7.78vw;
+  @include text-bold;
+  font-size: 4.72vw;
+}
+
+

@@ -1,0 +1,535 @@
+@import "../abstracts/web_mixin.module";
+
+.m_app_download {
+  display: none;
+  z-index: 40;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  font-size: 18px;
+  color:var(--palette-grey-100);
+  background-color: var(--palette-purple-500);
+  opacity: 0;
+  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  font-family: "NanumSquareOTFBold", "sans-serif";
+  .animations_wave {
+    display: none;
+  }
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+}
+.m_app_download.on {
+  .animations_wave{
+    display: block;
+    position: absolute;
+    width: 1000vh;
+    height: 65px;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url("https://youcandoo.yanadoocdn.com/v3/web/assets/images/web_m_wave_back.svg") repeat-x;
+    animation: animations__wave_app-download 3s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite;
+  }
+}
+@include keyframes(transform) {
+  0% {transform: translate3d(0,-15px,0);}
+  50% {transform: translate3d(0,5px,0);}
+  100% {transform: translate3d(0,-15px,0);}
+}
+@include keyframes(margin-left) {
+  0% {margin-left: 0;}
+  100% {margin-left: -1920px;}
+}
+@include keyframes(animations__wave_app-download){
+  0% {margin-left: 0;}
+  100% {margin-left: -360px;}
+}
+.main_article {
+  width: 100%;
+  padding: 178px 0 5% 0;
+  position: relative;
+  overflow: hidden;
+  color: var(--palette-grey-100);
+  background-color: var(--palette-purple-400);
+  .wrapper {
+    display: flex;
+    .p_main__text_wrapper {
+      display: flex;
+      flex-direction: column;
+      h5 {
+        @include subtext;
+        margin-bottom: 11.5%;
+        line-height: 1.5;
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          width: 39px;
+          height: 1px;
+          position: absolute;
+          bottom: -35%;
+          left: 0;
+          background-color: #fff;
+        }
+      }
+      h2 {
+        @include main_maintext;
+        .mint_color {
+          color: var(--palette-blue-400);
+        }
+      }
+      .p_main__store_wrapper {
+        display: flex;
+        margin-top: 44px;
+        li {
+          &:first-child {
+            margin-right: 5%;
+          }
+          div {
+            box-shadow: 0 20px 30px #00000029;
+          }
+        }
+      }
+    }
+    .p_main__img_wrapper {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      div {
+        border-radius: 2rem;
+        box-shadow: 3px 7px 17px #06083b33;
+      }
+    }
+  }
+  .p_main__animaions_wrapper {
+    @include size(100%, 100%);
+    position: absolute;
+    .p_main__animations_wave {
+      position: absolute;
+      bottom: -6%;
+      width: 1000vh;
+      height: 49%;
+      animation: margin-left 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+      &:nth-child(1) {
+        background: url($url-images + "web_main_wave.svg") repeat-x;
+      }
+      &:nth-child(2) {
+        left: -800px;
+        bottom: -9%;
+        animation: margin-left 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, transform 5s ease -1.25s infinite;
+        background: url($url-images + "web_main_wave_white.svg") repeat-x;
+      }
+    }
+  }
+}
+
+.together_article {
+  width: 100%;
+  overflow: hidden;
+  padding: 8% 0;
+  background-color: var(--palette-grey-100);
+  .p_main__title {
+    @include sub_maintext;
+    strong {
+      @include linetextafter;
+    }
+    .common_line_text {
+      @include linetext;
+    }
+    .bold_text {
+      font-family: "NanumSquareOTFExtraBold","sans-serif";
+    }
+  }
+  h5 {
+    margin-top: 3.2%;
+    font-size: 1.5rem;
+    letter-spacing: -.6px;
+    color: var(--palette-grey-500);
+    font-family: "NanumSquareOTFLight","sans-serif";
+  }
+  .p_video__wraaper.m_video__wraaper {
+    display: none;
+  }
+  .p_video__wraaper {
+    display: flex;
+    justify-content: center;
+    li {
+      width: 368px;
+      position: relative;
+      &:nth-child(1) {
+        margin-top: 11%;
+        margin-right: 18%;
+      }
+      video {
+        width: 100%;
+        border-radius: 2.1rem;
+        box-shadow: 20px 30px 30px #0000001a;
+      }
+    }
+  }
+}
+
+.data_article {
+  padding: 8% 0;
+  text-align: center;
+  @include bg-image(top);
+  background-image: url("https://youcandoo.yanadoocdn.com/v3/web/assets/images/web_data_article_back.svg");
+  time {
+    color: #646464;
+    font-size: 1.16rem;
+  }
+  .p_main__title {
+    margin-top: 1%;
+    margin-bottom: 4%;
+    @include sub_maintext;
+    strong {
+      @include linetextafter;
+    }
+    .common_line_text {
+      @include linetext;
+    }
+  }
+  .tab_btn__wrapper {
+    margin-bottom: 4.3%;
+    display: flex;
+    justify-content: center;
+    li {
+      cursor: pointer;
+      width: 88px;
+      height: 56px;
+      margin-right: 1.7%;
+      border-radius: 55px;
+      .wrap {
+        display: flex;
+        height: 56px;
+        justify-content: center;
+        span {
+          font-size: 1.3rem;
+          line-height: 57px;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          margin: -1px;
+          clip: rect(0, 0, 0, 0);
+          opacity: 0;
+        }
+      }
+      &:nth-child(1) {
+        background-color: var(--palette-purple-100);
+      }
+      &:nth-child(2) {
+        background-color: var(--palette-pink-100);
+      }
+      &:nth-child(3) {
+        background-color: var(--palette-yellow-100);
+      }
+    }
+    li.active {
+      width: 265px;
+      height: 56px;
+      font-family: "NanumSquareOTFBold", "sans-serif";
+      transition: all 0.3s;
+    }
+    li.active span {
+      width: auto;
+      height: auto;
+      overflow: visible;
+      margin-left: 10px;
+      clip: auto;
+      opacity: 1;
+      transition: transform 0.7s cubic-bezier(0.0, 0.0, 0.2, 1) 0.0001s, opacity 1s cubic-bezier(0.0, 0.0, 0.2, 1) 0.09s;
+    }
+  }
+  .tab_slide__wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 368px;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      width: 1104px;
+      li {
+        display: none;
+        width: 368px;
+        border-radius: 1.2rem;
+        &:nth-child(1) {
+          border: 1rem solid var(--palette-purple-100);
+          background-color: var(--palette-purple-100);
+        }
+        &:nth-child(2) {
+          border: 1rem solid var(--palette-pink-100);
+          background-color: var(--palette-pink-100);
+        }
+        &:nth-child(3) {
+          border: 1rem solid var(--palette-yellow-100);
+          background-color: var(--palette-yellow-100);
+        }
+        video {
+          width: 100%;
+        }
+      }
+      li.active{
+        display: block;
+      }
+    }
+  }
+}
+
+.leader_article {
+  padding: 8% 0;
+  text-align: center;
+  h2 {
+    margin-bottom: 9.2%;
+    @include sub_maintext;
+    strong {
+      @include linetextafter;
+    }
+    .common_line_text {
+      @include linetext;
+    }
+  }
+  video {
+    width: 100%;
+  }
+}
+
+.join_article {
+  padding: 8% 0;
+  text-align: center;
+  h2 {
+    margin-bottom: 9.2%;
+    @include sub_maintext;
+    strong {
+      @include linetextafter;
+    }
+    .common_line_text {
+      @include linetext;
+    }
+  }
+  .m_main__title {
+    display: none;
+  }
+  .p_store__wrapper {
+    display: flex;
+    justify-content: center;
+    li {
+      &:nth-child(1) {
+        margin-right: 1.8%;
+      }
+    }
+  }
+}
+
+// 반응형
+// 패드 반응형
+@include tablet {
+  .main_article {
+    .wrapper {
+      .p_main__img_wrapper {
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  .data_article {
+    background-size: 161%;
+    .tab_slide__wrapper {
+      overflow: hidden;
+      position: relative;
+      width: 302px;
+      margin: 0 auto;
+      ul {
+        display: flex;
+        width: 906px;
+        li {
+          width: 302px;
+        }
+      }
+    }
+  }
+}
+// 모바일 반응형
+@include mobile {
+  .m_app_download.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transition: transform 0.7s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s, opacity 0.5s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s;
+    -webkit-transition: transform 0.7s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s, opacity 0.5s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s;
+    -moz-transition: transform 0.7s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s, opacity 0.5s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s;
+    -o-transition: transform 0.7s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s, opacity 0.5s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s;
+  }
+  .main_article {
+    padding: 22% 0 10% 0;
+    .wrapper {
+      flex-direction: column;
+      text-align: center;
+      .p_main__text_wrapper {
+        margin-bottom: 10%;
+        h5 {
+          &:before {
+            @include x-vertical-center;
+          }
+        }
+      }
+      .p_main__store_wrapper {
+        display: none !important;
+      }
+      .p_main__img_wrapper {
+        width: 256px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .together_article {
+    padding: 25% 0;
+    overflow: hidden;
+    .p_video__wraaper.m_video__wraaper {
+      display: flex;
+      transform: translateX(28px);
+      -webkit-transform: translateX(28px);
+      -ms-transform: translateX(28px);
+      -o-transform: translateX(28px);
+      -moz-transform: translateX(28px);
+    }
+    .p_video__wraaper.m_video__wraaper.active{
+      transform: translateX(-260px);
+      -webkit-transform:translateX(-260px);
+      -ms-transform: translateX(-260px);
+      -o-transform: translateX(-260px);
+      -moz-transform: translateX(-260px);
+      transition-duration: 1.5s, 0.7s;
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      transition-delay: 0.0001s, 0.0001s;
+    }
+    .p_video__wraaper {
+      display: none;
+    }
+    .p_video__wraaper {
+      justify-content: flex-start;
+      width: 90vh;
+      margin: 0 auto;
+      margin-top: 15%;
+
+
+
+      li {
+        width: 250px;
+        &:nth-child(1) {
+          margin-top: 0;
+          margin-right: 8%;
+        }
+      }
+    }
+  }
+  .data_article {
+    padding: 25% 0;
+    background-color: #f7f6fb;
+    background-size: 0;
+    .tab_btn__wrapper {
+      li {
+        width: 67px;
+        height: 44px;
+        img {
+          width: 30px;
+        }
+        .wrap {
+          height: 44px;
+          span {
+            font-size: 1.3rem;
+            line-height: 44px;
+          }
+        }
+      }
+      li.active {
+        width: 200px;
+        height: 44px;
+      }
+    }
+    .tab_slide__wrapper {
+      width: 240px;
+      ul {
+        width: 720px;
+        li {
+          width: 240px;
+        }
+      }
+    }
+  }
+  .leader_article {
+    padding: 25% 0;
+    overflow: hidden;
+    h2 {
+      font-size: 2.6rem;
+    }
+    video {
+      width: 200%!important;
+      margin-left: -52%;
+      margin-right: -52%;
+    }
+  }
+  .join_article {
+    padding: 25% 0;
+    padding-bottom: 38%;
+    h2 {
+      font-size: 2.6rem;
+    }
+    .p_main__title {
+      display: none;
+    }
+    .m_main__title {
+      display: block;
+    }
+    .p_store__wrapper {
+      display: none;
+    }
+  }
+}
+
+// 작은 디바이스 모바일 반응형
+@include small-mobile {
+  .main_article {
+    .p_main__img_wrapper {
+      width: 200px !important;
+      margin: 0 auto;
+    }
+  }
+  .together_article {
+    .p_video__wraaper {
+      li {
+        width: 200px;
+      }
+    }
+  }
+  .data_article {
+    .tab_slide__wrapper {
+      width: 200px;
+      ul {
+        width: 600px;
+        li {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

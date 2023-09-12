@@ -1,0 +1,38 @@
+.item {
+  padding: 2.78vw 0;
+  p {
+    font-size: 4.17vw;
+    font-weight: 600;
+  }
+  .message {
+    display: block;
+    opacity: 0;
+    padding-top: 1.39vw;
+    font-size: 3.06vw;
+  }
+  &.error {
+    input {
+      border-bottom: 1px solid #FF0000 !important;
+    }
+    select {
+      border-bottom: 1px solid #FF0000 !important;
+    }
+    textarea {
+      border: 1px solid #FF0000 !important;
+    }
+    label {
+      button {
+        border-bottom: 1px solid #FF0000 !important;
+      }
+    }
+    .message {
+      opacity: 1;
+      color: #FF0000;
+    }
+  }
+  &.password {
+    .message {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+$url-images: "https://youcandoo.yanadoocdn.com/v3/web/assets/images/";
+
+
+// Break Point
+$small-mobile: 320px;
+$mobile: 576px;
+$tablet: 1176px;
+$desktop : 1400px;
+
+
+// Mixins
+@mixin small-mobile {
+  @media (max-width: #{$small-mobile}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin transform($value) {
+  transform: $value;
+  -webkit-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  -moz-transform: $value;
+}
+@mixin y-vertical-center {
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@mixin x-vertical-center {
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin bg-image($position) {
+  background-position: #{$position};
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: var(--palette-grey-100);
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin inner {
+  width: 65%;
+  height: auto;
+  max-width: 1194px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@mixin subtext {
+  font-size: 1.5rem;
+  letter-spacing: -0.6px;
+  font-family: 'NanumSquareOTFLight', 'sans-serif';
+}
+
+@mixin main_maintext {
+  position: relative;
+  font-size: 3rem;
+  letter-spacing: -1.2px;
+  line-height: 1.4;
+  font-family: 'NanumSquareOTFBold', 'sans-serif';
+}
+
+@mixin sub_maintext {
+  font-size: 3rem;
+  letter-spacing: -1.2px;
+  line-height: 1.4;
+  font-family: "NanumSquareOTFLight","sans-serif";
+}
+
+@mixin linetext {
+  position: relative;
+  z-index: 2;
+  font-family: "NanumSquareOTFExtraBold","sans-serif";
+}
+@mixin linetextafter {
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--palette-purple-100);
+  }
+}

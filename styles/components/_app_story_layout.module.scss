@@ -1,0 +1,121 @@
+@import '../abstracts/app_mixin.scss';
+
+.head_wrap {
+  position: relative;
+  width: 100%;
+  padding: 39.72vw 10.00vw 14.44vw;
+  color: #fff;
+  background-color: #000;
+  h3 {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    opacity: .8;
+    span {
+      display: block;
+      margin-bottom: 6.11vw;
+      font-size: 3.33vw;
+      font-weight: 600;
+    }
+    strong {
+      display: block;
+      font-size: 6.67vw;
+      font-weight: 300;
+      line-height: 1.3em;
+      letter-spacing: -0.5px;
+    }
+  }
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: .4;
+    content: '';
+  }
+}
+
+.banner_wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 23.33vw;
+  margin-bottom: 3.89vw;
+  color: #fff;
+  background-color: #000;
+  border-radius: 1.94vw;
+  a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -2777.50vw;
+    z-index: 100;
+    background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/brandstory_banner_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 97% 85%;
+    background-size: 8.33vw 1.94vw;
+  }
+  div {
+    padding: 3.33vw;
+    z-index: 90;
+    position: relative;
+    opacity: .8;
+    span {
+      font-size: 3.06vw;
+    }
+    p {
+      padding-top: 1.67vw;
+      font-size: 4.17vw;
+      line-height: 1.3em;
+    }
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105%;
+    content: '';
+    opacity: .5;
+    background-position: 0 25%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+.copy {
+  padding: 0 8.89vw;
+  span {
+    display: block;
+    padding-bottom: 8.33vw;
+    color: #9D9D9D;
+    font-size: 3.33vw;
+    border-bottom: 1px solid #f3f3f3;
+  }
+}
+
+.story01_bg {
+  &:after {
+    background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story1_top.png);
+  }
+}
+.story02_bg {
+  &:after {
+    background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story2_top.png);
+  }
+}
+.story03_bg {
+  &:after {
+    background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story3_top.png);
+  }
+}
+.story04_bg {
+  &:after {
+    background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/brandstory_4_top_img.png);
+  }
+}
+

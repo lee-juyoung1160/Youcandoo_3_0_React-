@@ -1,0 +1,89 @@
+@use "sass:math";
+
+
+//s:단위변환
+$mobile-contents-width: 360px;
+
+@mixin vw($property, $px)  {
+  $viewportWidth: math.div(1px, $mobile-contents-width) * 100;
+  $pxs: null;
+  $vws: null;
+
+  @each $value in $px {
+    @if type-of($value) == 'number' {
+      $px: math.div($value, 1px);
+      $pxs: append($pxs, if($px == 0, 0, $px + px));
+      $vw: $px * $viewportWidth;
+      $vws: append($vws, if($vw  == 0, 0, $vw + vw));
+    }
+    @else {
+      $pxs: append($pxs, $value);
+      $vws: append($vws, $value);
+    }
+  }
+  @media (max-width: 760px) {
+  #{$property}: $vws;
+  }
+}
+// e:단위변환
+
+
+// 미디어쿼리
+@mixin desktop {
+  @media (min-width: 720px) {
+    @content;
+  }
+}
+
+// 레이아웃
+@mixin inner {
+  padding: 0 4.44vw;
+}
+
+// 이미지
+@mixin bgImageUrl($image-name) {
+  background-image: url('//youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/#{$image-name}');
+}
+
+// 날짜
+@mixin date {
+    margin-top: 1.39vw;
+    color: #9D9D9D;
+    @include vw(font-size, 12px);
+}
+
+// 텍스트
+@mixin text-bold {
+  font-family: 'NanumSquareOTFBold', sans-serif;
+}
+
+@mixin text-extraBold {
+  font-family: 'NanumSquareOTFExtraBold', sans-serif;
+}
+
+// 애니메이션
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animate($name, $time) {
+  animation: #{$name} #{$time};
+  -moz-animation: #{$name} #{$time};
+  -webkit-animation: #{$name} #{$time};
+  -o-animation: #{$name} #{$time};
+}
+
+@mixin transition-fade {
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}

@@ -1,0 +1,336 @@
+@import '../abstracts/app_mixin.scss';
+
+
+.qna {
+  .qna_tab {
+    display: flex;
+    width: 100%;
+    padding-top: 1.67vw;
+    border-bottom: 1px solid #E2E8ED;
+    li {
+      display: flex;
+      width: 50%;
+      justify-content: center;
+      &.active {
+        button {
+          color: #6267EA;
+          @include text-extraBold;
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.83vw;
+            background-color: #6267EA;
+            content: '';
+          }
+        }
+      }
+      button {
+        position: relative;
+        width: 45.56vw;
+        height: 10.28vw;
+        color: #989898;
+        font-size: 4.5vw;
+        @include text-bold;
+      }
+    }
+  }
+  &_create{
+    padding: 2.78vw 4.44vw 27.78vw;
+  }
+  &_history {
+    @include inner;
+    &_guest {
+      padding-top: 2.78vw;
+      .guest_top {
+        padding: 19.44vw 0 13.89vw;
+        text-align: center;
+
+        p {
+          margin-top: 4.44vw;
+          font-size: 4.44vw;
+          @include text-bold;
+          text-align: center;
+          line-height: 1.2em;
+        }
+      }
+    }
+    &_list {
+      li {
+        display: flex;
+        position: relative;
+        align-items: center;
+        padding: 4.72vw 0;
+        border-bottom: 1px solid #E7E7E7;
+        a {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          text-indent: -9999px;
+        }
+        .title {
+          width: 65.28vw;
+          span {
+            display: block;
+            @include date;
+            margin-bottom: 1.67vw;
+          }
+
+          strong {
+            position: relative;
+            i {
+              display: block;
+              position: absolute;
+              right: -5.5vw;
+              bottom: 2px;
+              width: 4.17vw;
+              height: 4.17vw;
+              padding-left: 1.11vw;
+            }
+          }
+        }
+        .icon_answer {
+          width: 17.78vw;
+          height: 6.94vw;
+          color: #6267EA;
+          margin-top: 2.78vw;
+          margin-left: auto;
+          font-size: 3.33vw;
+          @include text-bold;
+          text-align: center;
+          line-height: 6.94vw;
+          border: 1px solid #6267EA;
+          border-radius: 5.56vw;
+        }
+        .complete {
+          color: #fff;
+          background-color: #5D5D5D;
+          border: 1px solid #5D5D5D;
+        }
+      }
+    }
+
+  }
+
+  .input_wrap {
+    position: relative;
+    width: 100%;
+    input[type="text"],input[type="email"],input[type="password"] {
+      width: 100%;
+      padding: 2.78vw 0;
+      font-size: 3.89vw;
+      text-align: left;
+      background-color: #fff;
+      border: none;
+      border-bottom: 1px solid #000;
+      &::placeholder {
+        color: #9D9D9D;
+      }
+    }
+    textarea {
+      width: 100%;
+      height: 40.56vw;
+      margin-top: 1.39vw;
+      padding: 2.78vw;
+      font-size: 3.89vw;
+      border: 1px solid #000000;
+      border-radius: 1.39vw;
+      &::placeholder {
+        color: #9D9D9D;
+      }
+    }
+    strong {
+      display: block;
+      color: #9D9D9D;
+      font-size: 3.33vw;
+      font-weight: 300;
+      text-align: right;
+    }
+    i.eye {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 10.00vw;
+      height: 10.00vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &_off {
+        @include bgImageUrl("inquiry_icon_eye_off.png");
+      }
+      &_on {
+        @include bgImageUrl("inquiry_icon_eye_on.png");
+      }
+    }
+  }
+  .select_wrap {
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 100%;
+      padding: 2.78vw 0;
+      font-size: 3.89vw;
+      background-color: #fff;
+      @include bgImageUrl("faq_btn_list_down.png");
+      background-position: 100% 50%;
+      background-repeat: no-repeat;
+      background-size: 11.11vw 11.11vw;
+      border: none;
+      border-bottom: 1px solid #000;
+    }
+  }
+  .file_upload_wrap {
+    display: flex;
+    .file_wrap {
+      display: flex;
+      margin-top: 3.33vw;
+
+      input[type="file"] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+      }
+      .upload_wrap {
+        position: relative;
+        width: 26.67vw;
+        height: 26.67vw;
+        margin-right: 5.56vw;
+
+        label {
+          display: flex;
+          justify-content: center;
+          width: 26.67vw;
+          height: 26.67vw;
+          text-align: center;
+          background-color: #fff;
+          border: 1px solid #D4D4D4;
+          border-radius: 1.94vw;
+
+          .file_length {
+            display: block;
+            color: #4C5264;
+            font-size: 3.33vw;
+            letter-spacing: 0;
+
+            > div {
+              position: relative;
+              width: 10.00vw;
+              height: 10.00vw;
+              top: 5.56vw;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+
+          .file_count {
+            display: block;
+            margin-top: 6vw;
+            color: #4C5264;
+            font-size: 3.33vw;
+            letter-spacing: 0;
+          }
+        }
+      }
+    }
+    .free_view_wrap {
+      display: flex;
+      margin-top: 3.33vw;
+      > div {
+        position: relative;
+        width: 26.67vw;
+        height: 26.67vw;
+        margin-right: 5.56vw;
+        background-color: #fff;
+        border-radius: 1.94vw;
+        img {
+          border-radius: 1.94vw;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        i {
+          position: absolute;
+          top: -3.56vw;
+          right: -3.56vw;
+          width: 11.11vw;
+          height: 11.11vw;
+        }
+      }
+
+    }
+  }
+  .checkbox_wrap {
+    position: relative;
+    width: 100%;
+    input[type="checkbox"] {
+      display: none;
+      + label {
+        display: flex;
+        align-content: center;
+        font-size: 13px;
+        @include text-bold;
+      }
+      + label i {
+        display: inline-flex;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        @include bgImageUrl("check_box_off.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &:Checked + label i {
+        @include bgImageUrl("check_box_on.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    button {
+      font-size: 3.61vw;
+      @include text-bold;
+      border-bottom: 1px solid #000;
+    }
+  }
+  .desc {
+    display: block;
+    padding-top: 2.78vw;
+    color: #4C5264;
+    font-size: 3.33vw;
+  }
+
+  /* MODAL */
+  .privacy {
+    border-top: 1px solid #ECECEC;
+    dl {
+      display: flex;
+      margin: 4.17vw 0;
+      font-size: 3.61vw;
+      line-height: 1.2em;
+      dt {
+        width: 35%;
+        margin-right: auto;
+        @include text-bold;
+      }
+      dd {
+        width: 65%;
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+  }
+  .success {
+    padding: 6.11vw 0;
+    color: #000;
+    font-size: 4.17vw;
+    line-height: 1.5em;
+  }
+
+}

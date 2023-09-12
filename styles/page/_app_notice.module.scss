@@ -1,0 +1,36 @@
+@import '../abstracts/app_mixin.scss';
+
+.notice_list {
+  @include inner;
+  ul {
+    li {
+      position: relative;
+      width: 100%;
+      @include vw(padding, 16px 0px);
+      @include bgImageUrl("notice_more_btn.png");
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      @include vw(background-size, 18px 18px);
+      border-bottom: 1px solid #E7E7E7;
+      a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-indent: -9999px;
+      }
+      .notice_list__info {
+        width: 81.67vw;
+        p {
+          font-size: 4.17vw;
+          @include text-bold;
+        }
+        span {
+          @include date;
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../abstracts/web_mixin.module";
+
+@include desktop {
+  .html {
+    font-size: 80% !important;
+  }
+}
+@include tablet {
+  .html {
+    font-size: 70% !important;
+  }
+}
+@include mobile {
+  .html {
+    font-size: 60% !important;
+  }
+}
+@include small-mobile {
+  .html {
+    font-size: 50% !important;
+  }
+}

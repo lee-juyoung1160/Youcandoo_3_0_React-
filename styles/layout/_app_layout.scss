@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import '../abstracts/app_mixin.scss';
+
+.body {
+  height: calc(100% - 13.89vw);
+  section {
+    @include vw(margin-top, 50px);
+
+    .bottom_fix {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+
+/* 두잇가이드 스와이프 슬라이드 */
+.swiper-pagination {
+  position: absolute !important;
+  left: inherit !important;
+  right: 3.06vw !important;
+  bottom: 5.00vw !important;
+  text-align: right !important;
+}
+.swiper-pagination-bullet {
+  width: 1.67vw !important;
+  height: 1.67vw !important;
+  margin-right: 1.94vw !important;
+  background-color: #A9A9A9 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #6A7BFC !important;
+}
+
+.contents_box .swiper-slide {  position: relative;
+  opacity: 0 !important;
+}
+.contents_box .swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
+}

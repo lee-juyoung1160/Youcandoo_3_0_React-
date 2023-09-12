@@ -1,0 +1,75 @@
+@import '../abstracts/app_mixin.scss';
+.modal_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  .modal_content {
+    position: fixed;
+    background-color: #fff;
+    z-index: 300;
+
+    &.center {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+    }
+    &.bottom {
+      left: 0;
+      bottom: 0;
+    }
+
+    &.full {
+      width: 100%;
+    }
+    &.lg {
+      width: 80.56vw;
+      padding: 4.44vw;
+    }
+    &.md {
+      width: 74.44vw;
+      text-align: center;
+      p {
+        display: none;
+      }
+    }
+    &.radius {
+      border-radius: 3.61vw;
+    }
+    &.radiusHalf {
+      border-radius: 5.56vw 5.56vw 0 0;
+    }
+    .modal_body {
+      h5 {
+        color: #000;
+        font-size: 4.44vw;
+        font-weight: 800;
+        text-align: center;
+      }
+      p {
+        padding: 4.17vw 0;
+        font-size: 3.61vw;
+        color: #5D5D5D;
+        line-height: 1.4em;
+      }
+    }
+  }
+  .modal_bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: .3;
+    z-index: 299;
+
+  }
+}

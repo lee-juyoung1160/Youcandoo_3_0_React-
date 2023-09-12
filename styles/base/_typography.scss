@@ -1,0 +1,14 @@
+@mixin font-face($name, $fail, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src: local(※), url('https://youcandoo.yanadoocdn.com/v3/web/assets/font/#{$fail}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+@include font-face("NanumSquareOTFExtraBold", "NanumSquareOTFExtraBold");
+@include font-face("NanumSquareOTFBold", "NanumSquareOTFBold");
+@include font-face('NanumSquareOTFRegular', 'NanumSquareOTFRegular');
+@include font-face('NanumSquareOTFLight', 'NanumSquareOTFLight');
+@include font-face('HGGGothicssiPro20g', 'HGGGothicssiPro20g');
+@include font-face('Noto Sans KR', 'noto-sans-kr-v12-korean-500');

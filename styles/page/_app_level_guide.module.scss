@@ -1,0 +1,113 @@
+@import '../abstracts/app_mixin.scss';
+
+.root {
+  margin-top: 13.89vw;
+}
+
+.level {
+  display: block;
+  width: 100%;
+  padding: 10.00vw 0 12.22vw;
+  text-align: center;
+  background-color: #F8F9FF;
+  div {
+    display: block;
+		width: 69.44vw;
+		height: 48.33vw;
+		margin: 0 auto;
+  }
+  h3 {
+    padding: 3vw 0 5vw;
+		color: #000;
+		font-size: 6.67vw;
+    @include text-bold;
+		text-align: center;
+		line-height: 1em;
+    span {
+      display: block;
+      color: #4C5264;
+      font-size: 4.17vw;
+      font-weight: 300;
+    }
+  }
+  p {
+    color: #8D8D8D;
+		font-size: 3.89vw !important;
+		line-height: 1.7em;
+    strong {
+      color: #6267EA;
+		  font-weight: 300;
+    }
+  }
+}
+
+.description {
+  @include inner;
+  ul {
+    padding: 2.78vw 0 16.67vw;
+    li {
+      display: flex;
+      align-items: center;
+      padding: 7.22vw 0 8.06vw;
+      border-bottom: 1px solid #F5F5F5;
+      div:nth-child(1) {
+        width: 21.11vw !important;
+        height: 20.83vw !important;
+        margin-right: 5.56vw !important;
+      }
+      dl {
+        display: flex;
+        width: 64.22vw;
+        font-size: 3.61vw;
+        line-height: initial;
+        dt {
+          width: 55%;
+          color: #8D8D8D;
+          margin-right: auto;
+        }
+        dd {
+          width: 45%;
+          margin-left: auto;
+          color: #000000;
+          @include text-bold;
+          text-align: right;
+        }
+      }
+      dl:nth-child(2) {
+        margin: 2.22vw 0;
+      }  
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.bonus {
+  color: #6267EA !important;
+  font-weight: 300 !important;
+}
+
+.notice {
+  background-color: #F3F3F3;
+  padding: 8.33vw 4.44vw 14vw;
+  color: #5D5D5D;
+  h5 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.78vw;
+    font-size: 3.61vw;
+    font-weight: 300;
+    i {
+      width: 5.56vw;
+      height: 5.56vw;
+      margin-right: 0.83vw;
+    }
+  }
+  li {
+    display: flex;
+		margin-bottom: 4.17vw;
+		font-size: 3.33vw;
+		line-height: 1.7em;
+  }
+}

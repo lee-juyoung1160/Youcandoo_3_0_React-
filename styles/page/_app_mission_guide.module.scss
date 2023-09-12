@@ -1,0 +1,84 @@
+@import '../abstracts/app_mixin.scss';
+
+.root {
+  margin-top: 13.89vw;
+  padding-bottom: 17.50vw;
+  background-color: #F6F7FB;
+  line-height: initial;
+  article {
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  h5 {
+    display: flex;
+    align-items: center;
+    color: #6267EA;
+    font-size: 3.89vw;
+    @include text-bold;
+  }
+}
+
+.paragraph {
+  color: #4C5264;
+  font-size: 4.17vw;
+  line-height: 1.5em;
+  h4 {
+    position: relative;
+    margin-bottom: 6.67vw;
+    color: #000;
+    font-size: 5.56vw;
+    @include text-extraBold;
+    line-height: 1.6em;
+  }
+  h4:before {
+    position: absolute;
+    top: -6.94vw;
+    left: 0;
+    width: 8.33vw;
+    height: 1.11vw;
+    background-color: #000;
+    content: '';
+  }
+  p {
+    margin-bottom: 3.89vw;
+  }
+}
+
+.inner {
+  padding: 0 5.56vw;
+  span {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 2.78vw;
+    color: #000;
+    font-size: 4.44vw;
+    @include text-bold;
+    @include bgImageUrl("mission-title-back-color.png");
+    background-size: 100% 2.22vw;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+  }
+  h3 {
+    font-size: 5.56vw;
+    @include text-extraBold;
+  }
+  em {
+    color: #6267EA;
+    @include text-bold;
+  }
+  p {
+    strong {
+      color: #000;
+    }
+  }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  > div {
+    width: 75.00vw;
+    margin: 6.67vw 0 9.21vw;
+  }
+}
+

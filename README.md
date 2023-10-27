@@ -1,11 +1,3 @@
-# 유캔두 홈페이지
-
-- 첫 작성 2021.08.23
-
-- IOS 이슈 : osCallbackHandler.postMessage 호출 후 callback 시 페이지 내부 함수를 호출하지 못하는 문제가 있음.
-            해당 페이지 (gift, qna, referral).
-            페이지 로드 이후 callback을 하는 방식을 시도해볼 여지가 있음.
-            참고 > https://developer.apple.com/documentation/webkit/wknavigationdelegate/1455629-webview?language=objc
 
 ## 기술 스택
 
